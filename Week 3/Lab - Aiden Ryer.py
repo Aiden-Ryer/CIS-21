@@ -10,7 +10,7 @@ elif light_color == "yellow":
     print("yield")
 else:
     print("error")
-'''
+
 #4
 age = int(input("Enter your age: "))
 athleticism = input("Is your athleticism above average or below average? ")
@@ -29,3 +29,23 @@ else:
         print("Resting heartrate is 45-70.")
     else:
         print("Resting heartrate is 71-94.")
+'''
+'''
+#5
+int1 = int(input("Enter first number: "))
+int2 = int(input("Enter second number: "))
+int3 = int(input("Enter third number: "))
+nums = [int1, int2, int3]
+if int1 <= int2 <= int3:
+    print(int1, int2, int3)
+elif int1 >= int2 >= int3:
+    print(int3, int2, int1)
+elif int1 <= int3 <= int2:
+    print(int1, int3, int2)
+elif int3 <= int1 <= int2:
+    print(int3, int1, int2)
+elif int2 <= int1 < int3:
+    print(int2, int1, int3)
+elif int2 <= int3 <= int1:
+    print(int2, int3, int1)
+'''
