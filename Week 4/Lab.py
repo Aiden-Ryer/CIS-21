@@ -38,11 +38,15 @@ while number >= 0:
     sum += number
     number = int(input("Enter a number: "))
 print(sum)
-'''
+
+#7
 n = 25
 while n!=1:
     if n%2==0:
         int(print(n))
+        n=n/2
+        -
     else:
         int(print(n))
         n=3*n+1
+'''

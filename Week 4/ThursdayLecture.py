@@ -36,6 +36,3 @@ while number != 'q':
     print(total)
     number = int(input("Enter a number, enter q when you are complete: "))
     '''
-x = 123
-for number in x:
-    print(number)
