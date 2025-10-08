@@ -55,7 +55,7 @@ def hamming_distance(word1,word2):
 word1 = input("Enter a word: ")
 word2 = input("Enter another word: ")
 print(f"the hamming distance is {hamming_distance(word1, word2)}")
-'''
+
 #8
 def last_letters(sentence):
     encode = ""
@@ -66,3 +66,4 @@ def last_letters(sentence):
     return encode
 sentence = input("Enter a sentence: ")
 print(last_letters(sentence))
+'''
