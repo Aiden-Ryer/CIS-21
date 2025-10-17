@@ -110,8 +110,23 @@ def total_cost(reciept):
 reciept = {"apple" : 4, "banana" : 2, "orange" : 7}
 print(total_cost(reciept))
 '''
+'''
 def item_cost(items):
     for item in items:
         print(item, items[item])
 items= {"apple" : 4, "banana" : 2, "orange" : 7}
 item_cost(items)
+'''
+#18
+def majority_element(numbers):
+    counts = {}
+    for num in numbers:
+        num = str(num)
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+    for num in counts:
+
+numbers = [2, 2, 2, 3, 1, 1]
+print(majority_element(numbers))
