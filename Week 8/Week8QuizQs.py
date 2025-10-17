@@ -118,6 +118,7 @@ items= {"apple" : 4, "banana" : 2, "orange" : 7}
 item_cost(items)
 '''
 #18
+'''
 def majority_element(numbers):
     counts = {}
     for num in numbers:
@@ -126,7 +127,15 @@ def majority_element(numbers):
             counts[num] += 1
         else:
             counts[num] = 1
+    
     for num in counts:
+    
 
 numbers = [2, 2, 2, 3, 1, 1]
 print(majority_element(numbers))
+'''
+
+
+
+
+    
