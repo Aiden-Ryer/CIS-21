@@ -62,7 +62,7 @@ def odd_num(num1, num2):
 print(odd_num(starting_num, ending_num))
 '''
 #5
-
+'''
 user_num = int(input("Give me a positive number: "))
 def hailstone_seq(user_num):
     seq = [user_num]
@@ -74,3 +74,7 @@ def hailstone_seq(user_num):
         seq.append(user_num)
     return seq
 print(hailstone_seq(user_num))
+'''
+#6 Find Factors in a list
+def find_factors(nums):
+    
