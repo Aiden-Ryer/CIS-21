@@ -1,49 +1,38 @@
 #1
+'''
 from random import randint
-'''
-value = randint(0,1)
-def heads_or_tails (guess):
-    if guess == value:
-        return "Correct!"
-    else:
-        return "Incorrect!"
-user_guess = int(input("Guess heads or tails, heads = 1, tails = 0: "))
-print(heads_or_tails(user_guess))
-'''
 
-#2
+def heads_or_tails(guess):
+    value = randint(0, 1)
+    if guess == "heads" :
+        guess = 1
+    elif guess == "tails":
+        guess = 0
+    if value == guess:
+        print("Correct!")
+    else:
+        print("Incorrect")
+user_guess = input("heads or tails: ")
+heads_or_tails(user_guess)  
 '''
-def odd_even(guess):
-    value = randint(0,9)
-    value %= 2
-    value_guess = ""
-    if value != 0:
-        value_guess = "odd"
-    else:
-        value_guess = "even"
-    if guess == value_guess:
-        return "Correct!"
-    else:
-        return "Incorrect!"
-user_guess = input("odd or even: ")
-print(odd_even(user_guess))
-'''
-#3
-def count_duplicates(num1, num2, num3):
-    duplicates = 0
-    if num1 == num2:
-        duplicates = 2
-    if num1 == num3:
-        duplicates = 2
-    if num2 == num3:
-        duplicates = 2
-    if num1 == num2 == num3:
-        duplicates = 3
-    if duplicates == 0:
-        return "Each number is unique"
-    else:
-        return "there are "f'{duplicates}'" of the same number"
-user_num1 = int(input("Enter a number: "))
-user_num2 = int(input("Enter a number: "))
-user_num3 = int(input("Enter a number: "))
-print(count_duplicates(user_num1, user_num2, user_num3))
+#15
+def is_odd(numbers):
+    odds = []
+    for nums in numbers:
+        if nums % 2 != 0:
+            odds.append(nums)
+    return odds
+
+def is_neg(numbers):
+    negs = []
+    for nums in numbers:
+        if nums < 0:
+            negs.append(nums)
+    return negs
+
+def report_odd_negatives(numbers):
+    odds = is_odd(numbers)
+    negs = is_neg(odds)
+    return negs
+numbers = [-1, 2, -3, -4, 5, 17]
+print(report_odd_negatives(numbers))
