@@ -38,6 +38,14 @@ There is a special method in python called __str__()
 [that is, __str__()] which is waht the print function prints. By default, __str__() is
 class name and location in memory. We can change the this using a procedure called overriding.
 
+The instance variables of an object can differ by copies (instances) of that object, and as a result all
+need their own space in memory. However, since all the methods do the same thing(just on different values
+of the instance variables), they can "share" space in memory.
+
+When we define a class, the name of that class is added to the current namespace with a reference to a class
+definition object. Anytime we try to do "planet stuff" python first check's for this reference using the instance
+variable __class__ which reference the class definition object.
+
 '''
 
 import math
@@ -74,11 +82,37 @@ class Planet:
         msg = ""
         msg += f'hello {self.name}, how are you?'
         return msg
-planet1 = Planet('X25', 4567, 56789, 56)
-planet2 = Planet("z37", 1235, 67890987, 4567)
 
-#print(planet1.get_name()), 
-#print(planet2.get_volume())
+planet1 = Planet('X25', 45, 198,1000)
+planet2 = Planet("z37", 12, 234, 2381)
 
-print(planet1)
-print(planet2)
+class Star:
+    def __init__(self, _name, _distance, _mass, _color):
+        self.name = _name
+        self.distance = _distance
+        self.mass = _mass
+        self.color = _color
+    def get_name(self):
+        return self.name
+    def get_distance(self):
+        return self.distance
+    def get_mass(self):
+        return self.distance
+    def get_color(self):
+        return self.color
+star1 = Star('Blue Nova', 567, 789, "blue")
+star2 = Star('giant dwarf', 23456, 4567, "green")
+star3 = Star('Red Giant', 678, 986, "red")
+
+
+
+class PlanetarySystem:
+    def __init__(self, _star):
+        self.star = _star
+        self.planets = []
+    def  add_planet(self, _planet):
+        self.planets.append(_planet)
+    def show_planets(self):
+        for planet in self.planets:
+            print(planet.get_name())
+
